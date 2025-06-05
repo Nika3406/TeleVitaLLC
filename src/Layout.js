@@ -46,7 +46,7 @@ function Layout({ children }) {
 
       {/* Footer */}
       <div className="footer">
-        <p>Copyright © 2024 Televitallc. All Rights Reserved.</p>
+        <p>Copyright © 2025 Televitallc. All Rights Reserved.</p>
       </div>
     </>
   );
