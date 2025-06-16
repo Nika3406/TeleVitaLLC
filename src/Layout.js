@@ -19,7 +19,7 @@ function Layout({ children }) {
             <Link to="/" className="logo">
               <div className="logo-container">
                 <img src="/TeleVitaLogo(White).png" alt="TeleVita Logo" width="100" height="100" />
-                <span className="logo-text">TELEVITALLC</span>
+                <span className="logo-text">TeleVitaLLC</span>
               </div>
             </Link>
             <div className="menu-toggle" onClick={toggleMenu}>
