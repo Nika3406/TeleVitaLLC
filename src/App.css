@@ -1,0 +1,341 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d8def5;
+    color: #333;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container */
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #000000;
+    z-index: 1;
+}
+
+.contacts .container {
+    font-size: 20px;
+}
+
+.container p {
+    padding: 10px; /* Reduce padding for better responsiveness */
+}
+
+/* Header */
+header {
+    background-color: #007A8E;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure full-width */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Allows menu items to wrap on smaller screens */
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Prevents text from wrapping awkwardly */
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Button */
+nav .button, .card button {
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+nav .button:hover, .card button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #4a00e0, #00aaff);
+}
+
+.card button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Menu Toggle for Mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    z-index: -1;
+}
+
+.hero-video {
+    width: 100%; /* Ensures the video takes up the full width */
+    height: auto; /* Ensures the video takes up the full height */
+    object-fit: cover; /* Make the video cover the entire area */
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2; /* Ensures the video stays in the background */
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Adjusts spacing between text and image */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.text-section {
+    padding: 10px; /* Reduces padding for smaller screens */
+    text-align: left;
+    max-width: 600px; /* Prevents it from stretching too wide */
+    flex: 1;
+    word-wrap: break-word; /* Ensures long words break properly */
+}
+
+.text-section h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem); /* Responsive font size */
+    font-weight: bold;
+    text-align: center; /* Center-align heading */
+    margin-bottom: 10px;
+    color: #000000;
+    word-wrap: normal; /* Prevents forced wrapping */
+    padding-top: 20px;
+}
+
+.text-section p {
+    padding-bottom: 20px;
+    font-size: clamp(1.25rem, 2vw, 1rem);
+}
+
+.image-section {
+    flex: 1;
+    max-width: 600px; /* Increase image size within bounds */
+}
+
+.hero-image {
+    max-width: 100%; /* Increase width beyond 100% to make the image larger */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Space between cards */
+    max-width: 1000px; /* Set a max width for the container */
+    height: auto;
+    margin: 0 auto; /* Center the container */
+    justify-content: space-evenly; /* Space the columns evenly */
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-align: left; /* Align text to the left */
+}
+
+.card1 {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 250px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-align: left; /* Align text to the left */
+}
+
+.card1 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.card1 ul {
+    margin-left: 1rem;
+}
+
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    margin-left: 1rem;
+}
+
+/* Specifics */
+.contacts {
+    padding: 2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    .text-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .content-wrapper {
+        flex-direction: column; /* Stacks text and image */
+    }
+
+    .text-section {
+        text-align: left;
+    }
+    
+    .hero-image {
+        max-width: 80%; /* Reduces image size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #007A8E;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    .content-wrapper {
+        gap: 10px; /* Reduce spacing */
+    }
+
+    .text-section h2 {
+        font-size: 1.6rem; /* Adjust font size */
+    }
+
+    .card1 {
+        width: 100%;
+        padding: 10px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .card1 {
+        width: 100%;
+        padding: 10px;
+        height: auto;
+    }
+
+    .text-section h2 {
+        font-size: 1.4rem; /* Smaller text for mobile */
+    }
+}
