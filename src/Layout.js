@@ -10,6 +10,10 @@ function Layout({ children }) {
     setIsMobileMenuActive(!isMobileMenuActive);
   };
 
+  const handleLinkClick = () => {
+  setIsMobileMenuActive(false);
+  };
+
   return (
     <>
       {/* Header */}
@@ -28,17 +32,29 @@ function Layout({ children }) {
               <span className="bar"></span>
             </div>
             <ul id="nav-links" className={isMobileMenuActive ? 'active' : ''}>
-              <li><Link to="/">HOME</Link></li>
-              <li><Link to="/about">ABOUT</Link></li>
-              <li><Link to="/services">SERVICES</Link></li>
-              <li><Link to="/contacts">CONTACTS</Link></li>
+              <li><Link to="/" onClick={handleLinkClick}>HOME</Link></li>
+              <li><Link to="/about" onClick={handleLinkClick}>ABOUT</Link></li>
+              <li><Link to="/services" onClick={handleLinkClick}>SERVICES</Link></li>
+              <li><Link to="/contacts" onClick={handleLinkClick}>CONTACTS</Link></li>
               <li>
-                <a href="https://us.fullscript.com/welcome/emetreveli1734212743" className="button" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://us.fullscript.com/welcome/emetreveli1734212743"
+                  className="button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleLinkClick}
+                >
                   SUPPLEMENT STORE
                 </a>
               </li>
               <li>
-                <a href="https://practice.kareo.com/televita" className="button" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://practice.kareo.com/televita"
+                  className="button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleLinkClick}
+                >
                   SCHEDULE APPOINTMENT
                 </a>
               </li>
