@@ -284,11 +284,11 @@ nav .button:hover, .card button:hover {
     #nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 70%;
         background-color: #007A8E;
         position: absolute;
-        top: 70px;
-        left: 0;
+        top: 150px;
+        right: 0;
         padding: 10px;
     }
 
